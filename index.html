@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Entrée des phrases les plus cultes de moi-même</title>
+</head>
+<body>
+    <h1>Mes Citations</h1>
+    <h2>Gestionnaire de citations en ligne</h2>
+    <h3>0 citations</h3>
+<hr>
+<form id="formEntries">
+    <label for="citation">Citation : </label>
+    <input type="text" name="citation" id="citation" autocomplete="off" placeholder="Citation" autofocus required>
+    <br>
+    <label for="author">Auteur(trice) : </label>
+    <input type="text" name="author" id="author" autocomplete="off" placeholder="Nom de l'auteur(trice)" autofocus required>
+    <button type="submit" id="buttonSend">Proposer</button>
+</form>
+<div id="quote-list">
+    <div class="quote">
+        <p>Citation : "On ne naît pas femme, on le devient."</p>
+        <p>Autrice : Simone de Beauvoir</p>
+        <p>Citation : "Maman disait toujours, la vie c'est comme une boîte de chocolat, on ne sait jamais sur quoi on va tomer"</p>
+        <p>Auteur : "Forrest Gump"</p>
+    </div>
+</div>
+<script defer src="script.js"></script>    
+</body>
+</html>

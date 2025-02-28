@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+#formEntries{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    padding: 15px;
+}
+#quote-list{
+    display: flex;
+    justify-content: center;
+}
+.quote{
+    display: flex;
+    flex-direction:column;
+    height : auto;
+    width: 900px;
+    padding: 1rem;
+    background-color: beige;
+    box-shadow: 5px 10px 5px grey;
+}

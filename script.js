@@ -1,34 +1,36 @@
 const formEntries = document.querySelector('#formEntries')
-const citationInput = document.querySelector('#citation')
+const quoteInput = document.querySelector('#quote')
 const authorInput = document.querySelector('#author')
 const buttonSend = document.querySelector('#buttonSend')
 
-formEntries.addEventListener("submit", function(authorInput, citationInput){
+formEntries.addEventListener("click", function(event){
     
     // document.body.style.backgroundColor = "red"
-    console.log("✍️", authorInput, citationInput)
-    console.log("✒️", citation)
-    console.log("😁", author)
+    console.log("✍️", quoteInput)
+    console.log("😁", authorInput)
 })
-
-const author = (event) => {
-    console.log(event.value)
-}
-author(formEntries)
 
 buttonSend.addEventListener("click", function(event){
-    console.log("bouton auteur",event.buttonSend)
+    console.log("bouton auteur",buttonSend.value)   
 })
+const addQuote = (quote, author) =>{
+    const newParagraphQuote = document.createElement('p')
+    newParagraphQuote.setAttribute('text')
+    const newParagraphAuthor = document.createElement('p')
+    newParagraphAuthor.setAttribute('author')
+    newParagraphQuote.innerText = quote
+    newParagraphAuthor.innerText = author
+}
 
+// Nous allons maintenant afficher les citations saisies directement sur la page.
 
+// - Créez une fonction addQuote(quote, author) prenant deux paramètres (quote et author, du coup).
+// - Dans cette fonction :
+//     - Créez un élément <p> pour la citation et attribuez-lui la classe "text".
+//     - Créez un élément <p> pour l’auteur/autrice et attribuez-lui la classe "author".
+//     - Insérez les valeurs des paramètres quote et author dans ces éléments.
+//     - Créez une <div> avec la classe "quote", puis ajoutez-y les deux paragraphes.
+//     - Récupérez l’élément ayant l’id "quote-list" et ajoutez-y la nouvelle citation avec appendChild().
+// - Modifiez le gestionnaire d’événements du formulaire pour appeler addQuote() au lieu de simplement afficher les valeurs dans la console.
 
-
-// Les choses sérieuses commencent. Il est temps d’interagir avec notre page en JavaScript !
-
-// On passe donc sur notre ficher JS. Ajoutez un gestionnaire d’événement avec addEventListener sur le formulaire,
-//  n'hesitez pas à jeter un oeil à la documentation sur les forms ou les eventListener, c'est le moment ;).
-
-// Dans la fonction appelée lors de la soumission du formulaire :
-
-// - Récupérez les valeurs des champs <input> dans deux variables : text et author.
-// - Utilisez console.log() pour afficher ces valeurs et vérifier leur récupération.
+// Besoin d'un coup de main ? Vous pouvez créer un élément en JS avec la fonction document.createElement('div')
